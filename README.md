@@ -1,68 +1,72 @@
-AgriWeb App
-AgriWeb App es una aplicación web de una sola página (SPA) diseñada para proporcionar herramientas tecnológicas avanzadas a agricultores y ganaderos. La aplicación integra funcionalidades de autenticación, geolocalización, visualización de mapas interactivos, consulta de datos meteorológicos, análisis masivo de datos a través de tablas interactivas y análisis de imágenes utilizando inteligencia artificial.
+# AgriWeb App
 
-Funcionalidades
-1. Autenticación de Usuarios
-Inicio de Sesión, Registro y Recuperación de Contraseña:
-Utiliza Firebase Authentication para gestionar el acceso de los usuarios. Los formularios de autenticación permiten:
-Iniciar sesión con email y contraseña.
-Registrar nuevos usuarios.
-Recuperar contraseña mediante correo electrónico.
-Mensaje de Bienvenida:
-Una vez autenticado, se muestra un mensaje de bienvenida que incluye el email del usuario en el dashboard.
-2. Mapa Interactivo
-Geolocalización:
-Utiliza la API de geolocalización del navegador para obtener la posición actual del usuario.
-Visualización de Mapas:
-Se emplea Leaflet.js para mostrar un mapa interactivo centrado en la ubicación del usuario.
-Capas Adicionales:
-Se añade un marcador que indica la ubicación actual.
-Se dibuja un polígono representando una zona agrícola de ejemplo.
-Se consulta la API de Open-Meteo para obtener datos meteorológicos y, si se detecta precipitación, se dibuja un círculo en el mapa representando la intensidad de la lluvia.
-3. Datos Masivos
-Tablas Interactivas:
-Se utiliza DataTables.js con la extensión Buttons para mostrar datos masivos obtenidos de la API de Open-Meteo. Las tablas incluyen:
-Fecha/Hora
-Temperatura
-Humedad
-Precipitaciones
-Velocidad del viento
-Exportación:
-Permite exportar los datos a formatos como CSV y Excel.
-4. Análisis de Imágenes con TensorFlow.js
-Captura de Imágenes:
-La aplicación permite capturar imágenes desde la cámara del dispositivo (con opción de elegir entre cámara frontal o trasera).
-Procesamiento y Análisis:
-Las imágenes capturadas se preprocesan y se analizan mediante un modelo preentrenado usando TensorFlow.js.
-Modelo Utilizado:
-Se utiliza un modelo basado en MobileNetV2 afinado para tareas agrícolas, con un tamaño de entrada esperado de 416x416 píxeles. El modelo realiza:
-Detección de Enfermedades: Identifica si la planta está saludable o presenta indicios de enfermedad.
-Clasificación de Tipos de Cultivos: Clasifica la imagen en categorías predefinidas (por ejemplo: Maíz, Trigo, Soja).
-Detección de Niveles de Madurez: Estima el nivel de madurez de los frutos (expresado en porcentaje).
-5. Exploración de Secciones
-Navegación Dinámica:
-El dashboard permite al usuario navegar fácilmente entre las secciones:
-Mapa Interactivo: Visualización del mapa, datos meteorológicos y capas ambientales.
-Datos Masivos: Tabla interactiva con datos meteorológicos.
-Análisis de Imágenes: Herramienta para capturar y analizar imágenes agrícolas.
-Tecnologías y Herramientas
-Frontend:
+AgriWeb App es una aplicación web de una sola página (SPA) diseñada para brindar herramientas tecnológicas avanzadas a agricultores y ganaderos. La aplicación integra funcionalidades de autenticación, visualización de mapas interactivos, consulta de datos meteorológicos, análisis masivo de datos y análisis de imágenes mediante inteligencia artificial.
 
-HTML5, CSS3 y JavaScript (ES6)
-Bootstrap 4.5
-Mapas:
+---
 
-Leaflet.js para mapas interactivos
-Datos Meteorológicos:
+## Funcionalidades
 
-Open-Meteo API
-Tablas Interactivas:
+### 1. Autenticación de Usuarios
+- **Inicio de Sesión, Registro y Recuperación de Contraseña:**  
+  Utiliza **Firebase Authentication** para gestionar el acceso de los usuarios.  
+  - Inicia sesión con email y contraseña.
+  - Registra nuevos usuarios.
+  - Recupera la contraseña mediante correo electrónico.
+- **Mensaje de Bienvenida:**  
+  Al iniciar sesión, se muestra un mensaje de bienvenida personalizado con el email del usuario.
 
-DataTables.js y su extensión Buttons
-Autenticación:
+### 2. Mapa Interactivo
+- **Geolocalización:**  
+  Obtiene la ubicación actual del usuario utilizando la API de geolocalización del navegador.
+- **Visualización:**  
+  Muestra un mapa interactivo centrado en la ubicación actual utilizando **Leaflet.js**.
+- **Capas Adicionales:**  
+  - Marca la posición actual del usuario.
+  - Dibuja un polígono representando una zona agrícola de ejemplo.
+  - Consulta la [Open-Meteo API](https://open-meteo.com/) para mostrar datos meteorológicos y, si se detecta lluvia, dibuja un círculo que representa la intensidad de la precipitación.
 
-Firebase Authentication
-Análisis de Imágenes:
+### 3. Datos Masivos
+- **Tablas Interactivas:**  
+  Utiliza **DataTables.js** (con extensión **Buttons**) para listar datos meteorológicos masivos.  
+  - Columnas: Fecha/Hora, Temperatura, Humedad, Precipitaciones y Viento.
+  - Funcionalidades: Filtros, ordenación y exportación a CSV/Excel.
 
-TensorFlow.js
-Modelo preentrenado basado en MobileNetV2 afinado para tareas agrícolas (entrada esperada: 416x416x3)
+### 4. Análisis de Imágenes con TensorFlow.js
+- **Captura de Imágenes:**  
+  Permite capturar imágenes desde la cámara del dispositivo, con opción de elegir entre cámara frontal y trasera.
+- **Procesamiento y Análisis:**  
+  Utiliza **TensorFlow.js** para analizar la imagen capturada con un modelo preentrenado basado en **MobileNetV2** afinado para tareas agrícolas.  
+  - **Detección de Enfermedades:** Evalúa si la planta está saludable o enferma.
+  - **Clasificación de Cultivos:** Identifica el tipo de cultivo (por ejemplo, Maíz, Trigo, Soja).
+  - **Nivel de Madurez:** Calcula un porcentaje de madurez del fruto.
+
+### 5. Exploración de Secciones
+- **Navegación Dinámica:**  
+  El dashboard permite navegar fácilmente entre:
+  - **Mapa Interactivo:** Muestra el mapa y los datos meteorológicos.
+  - **Datos Masivos:** Presenta una tabla interactiva con datos históricos.
+  - **Análisis de Imágenes:** Ofrece la herramienta para capturar y analizar imágenes.
+
+---
+
+## Tecnologías Utilizadas
+
+- **Frontend:**  
+  - HTML5, CSS3, JavaScript (ES6)
+  - [Bootstrap 4.5](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+- **Mapas:**  
+  - [Leaflet.js](https://leafletjs.com/)
+- **Datos Meteorológicos:**  
+  - [Open-Meteo API](https://open-meteo.com/)
+- **Tablas Interactivas:**  
+  - [DataTables.js](https://datatables.net/) con la extensión [Buttons](https://datatables.net/extensions/buttons/)
+- **Autenticación:**  
+  - [Firebase Authentication](https://firebase.google.com/products/auth)
+- **Análisis de Imágenes:**  
+  - [TensorFlow.js](https://www.tensorflow.org/js)  
+  - Modelo preentrenado basado en **MobileNetV2** (entrada: 416×416×3)
+
+---
+
+## Estructura del Proyecto
+
