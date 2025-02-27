@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  animation: fadeIn 1s ease-in;
+}
+
+h1, h3 {
+  color: #343a40;
+  animation: slideIn 1s ease-out;
+}
+
+
+.login-form, 
+form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: popIn 0.5s ease-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes popIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Estilo para campos de entrada */
+input.form-control {
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s ease;
+}
+
+input.form-control:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+/* Estilo para botones */
+.btn {
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.02);
+}
+
+/* Estilo para la barra de navegación */
+.navbar-brand {
+  font-weight: 700;
+}
+
+/* Transición suave al cambiar de visibilidad en los formularios */
+form.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
