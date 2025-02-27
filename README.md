@@ -65,8 +65,3 @@ AgriWeb App es una aplicación web de una sola página (SPA) diseñada para brin
 - **Análisis de Imágenes:**  
   - [TensorFlow.js](https://www.tensorflow.org/js)  
   - Modelo preentrenado basado en **MobileNetV2** (entrada: 416×416×3)
-
----
-
-## Estructura del Proyecto
-
