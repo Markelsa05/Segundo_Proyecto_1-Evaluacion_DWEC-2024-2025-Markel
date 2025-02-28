@@ -1,55 +1,41 @@
-/* responsive.css */
 
-/* ============================
-   Estilos para dispositivos pequeños
-   (máximo ancho 767.98px)
-============================= */
 @media (max-width: 767.98px) {
-  /* Ajusta el padding del body para espacios reducidos */
   body {
     padding: 10px;
   }
   
-  /* Navbar: reduce el tamaño de la marca y los enlaces */
   .navbar-brand {
     font-size: 1.2rem;
   }
   .nav-link {
     font-size: 0.9rem;
   }
-  
-  /* Contenedores: reduce los márgenes y el padding interno */
   .container,
   .container-fluid {
     padding-left: 15px;
     padding-right: 15px;
   }
-  
-  /* Encabezados: tamaños más pequeños para mejor visualización */
+
   h1 {
     font-size: 2rem;
   }
   h3 {
     font-size: 1.5rem;
   }
-  
-  /* Formularios: reduce márgenes y padding para adaptarse a la pantalla */
+
   form {
     margin: 20px auto;
     padding: 15px;
   }
-  
-  /* Ajusta la altura del mapa para dispositivos móviles */
+
   #map {
     height: 300px !important;
   }
-  
-  /* DataTables: reduce el tamaño de fuente para caber en pantallas pequeñas */
+
   #dataTable {
     font-size: 0.9rem;
   }
-  
-  /* Tarjetas en card-deck: se muestran en bloque (apiladas verticalmente) */
+
   .card-deck {
     display: block;
   }
@@ -57,36 +43,29 @@
     margin-bottom: 15px;
     width: 100%;
   }
-  
-  /* Botones: tamaño y padding reducidos para pantallas pequeñas */
+
   .btn {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
   }
-  
-  /* Contenedor de video: asegúrate que el video se ajuste al ancho */
+
   #videoContainer video {
     width: 100%;
     height: auto;
   }
-  
-  /* Mensaje de bienvenida: ajusta el tamaño de fuente */
+
   #welcomeMessage {
     font-size: 1.2rem;
   }
 }
 
-/* ============================
-   Estilos para dispositivos medianos
-   (ancho entre 768px y 991.98px)
-============================= */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  /* Navbar: incrementa un poco el tamaño de la marca */
+
   .navbar-brand {
     font-size: 1.4rem;
   }
   
-  /* Encabezados: tamaños intermedios para tablets */
+
   h1 {
     font-size: 2.5rem;
   }
@@ -94,18 +73,18 @@
     font-size: 1.75rem;
   }
   
-  /* Formularios: márgenes y padding ligeramente mayores */
+
   form {
     margin: 30px auto;
     padding: 20px;
   }
   
-  /* Mapa: aumenta la altura para dispositivos medianos */
+
   #map {
     height: 350px !important;
   }
   
-  /* Tarjetas en card-deck: mostrar en dos columnas */
+
   .card-deck {
     display: flex;
     flex-wrap: wrap;
@@ -115,26 +94,20 @@
     flex: 1 1 calc(50% - 15px);
   }
   
-  /* DataTables: tamaño de fuente normal para tablets */
+
   #dataTable {
     font-size: 1rem;
   }
 }
 
-/* ============================
-   Estilos para dispositivos grandes
-   (mínimo ancho 992px)
-============================= */
+
 @media (min-width: 992px) {
-  /* Puedes mantener los estilos base para pantallas grandes o realizar ajustes adicionales si es necesario */
-  
-  /* Ejemplo: ajuste en el padding de los contenedores */
+
   .container, .container-fluid {
     padding-left: 30px;
     padding-right: 30px;
   }
-  
-  /* Ejemplo: mayor tamaño para encabezados */
+
   h1 {
     font-size: 3rem;
   }
@@ -142,12 +115,12 @@
     font-size: 2rem;
   }
   
-  /* Ejemplo: mayor altura para el mapa */
+
   #map {
     height: 400px !important;
   }
   
-  /* Ejemplo: tarjetas en card-deck se muestran en una fila */
+
   .card-deck {
     display: flex;
     flex-wrap: nowrap;
@@ -158,7 +131,7 @@
     flex: 1;
   }
   
-  /* Botones: tamaño y padding adecuados para pantallas grandes */
+
   .btn {
     font-size: 1rem;
     padding: 0.75rem 1.5rem;
